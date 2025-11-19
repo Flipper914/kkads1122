@@ -43,7 +43,8 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
-
+      
+    
         /* Theme Styles */
         body.light-theme { background-color: var(--bg-color-light); color: var(--text-color-light); }
         body.dark-theme { background-color: var(--bg-color-dark); color: var(--text-color-dark); }
@@ -162,13 +163,21 @@
 </head>
 <body>
 
+<script>
+   // your big app initialization script here...
+</script>
+
+</body>
+</html>
+
+
     <div id="app">
         <header class="profile-header">
             <div class="profile-info">
                 <img id="user-photo" src="" alt="User Photo">
                 <div class="user-details">
                     <h1 id="user-name">Loading... <i class="fas fa-check-circle verified-icon"></i></h1>
-                    <p>Balince: $<span id="user-points">0</span><i class="fas fa-coins coin-icon"></i></p>
+                    <p>Balance: $<span id="user-points">0</span><i class="fas fa-coins coin-icon"></i></p>
                 </div>
             </div>
         </header>
@@ -180,7 +189,7 @@
                 <div class="stats-grid">
                     <div class="stat-card">
                         <h3>Daily Ads Watched</h3>
-                        <p><span id="daily-ads-watched">00</span> /  1000</p>
+                        <p><span id="daily-ads-watched">00</span> /  10000</p>
                     </div>
                     <div class="stat-card">
                         <h3>Total Referrals</h3>
@@ -228,12 +237,12 @@
                         <select id="withdraw-method" required>
                             <option value="Ton">Ton</option>
                             <option value="Usdt">Usdt</option>
-                            <option value="Telegram_Star">Telegram_Star</option>
+                            <option value="Telegram_Star">⭐️Telegram_Star</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="account-number">Account Number/ID:</label>
-                        <input type="text" id="account-number" placeholder="e.g., 012345..." required>
+                        <input type="text" id="account-number" placeholder="⭐️➡TgUsername/DepositAddress" required>
                     </div>
                     <div class="form-group">
                         <label for="amount">Points to Withdraw:</label>
@@ -258,23 +267,26 @@
         <div class="modal-content"><div class="loader"></div><p>Loading Ad...</p></div>
     </div>
     
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <meta name="monetag" content="173a40c14d21b6946b5e58b8564f4873">
-  <script src="https://3nbf4.com/act/files/tag.min.js?z=10199050" data-cfasync="false" async></script>
-  <script src='//libtl.com/sdk.js' data-zone='10198212' data-sdk='show_10198212'></script>
-  <script>(function(s){s.dataset.zone='10199147',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+    <meta name="monetag" content="fb0a8273fe71b9cd4e17d4e460a1dca8">
+  <script src='//libtl.com/sdk.js' data-zone='10207506' data-sdk='show_10207506'></script>
+  <script>(function(s){s.dataset.zone='10207609',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+  <script src="https://3nbf4.com/act/files/tag.min.js?z=10207611" data-cfasync="false" async></script>
+  <script>(function(s){s.dataset.zone='10207616',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+  <script>(function(s){s.dataset.zone='10207627',s.src='https://groleegni.net/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+  <script>(function(s){s.dataset.zone='10207636',s.src='https://gizokraijaw.net/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+  https://otieu.com/4/10207640
     
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const tg = window.Telegram.WebApp;
 
             // --- Configuration ---
-            const BOT_TOKEN = "8478476342:AAGLSlHHPTdsLyt5r3nTqFWQ5imrK-es3XI";
-            const BOT_USERNAME = "@cheap_treader_bot"; // Your bot's username
+            const BOT_TOKEN = "8256957234:AAFyvWgZ8U0LV1E9zvi9CrLKNsjTwC129bo";
+            const BOT_USERNAME = "@Kkads_bot"; // Your bot's username
             const ADMIN_CHAT_ID = "YOUR_TG_ID";
             const CHANNEL_LINK = "https://t.me/cheap_treader";
             const GROUP_LINK = "https://t.me/cheap_treader_gp";
-            const DAILY_AD_LIMIT = 100;
+            const DAILY_AD_LIMIT = 10000;
             const POINTS_PER_AD = 1;
             const CHANNEL_JOIN_BONUS = 05;
             const GROUP_JOIN_BONUS = 05;
@@ -382,10 +394,10 @@
 
             const handleWatchAd = () => {
                 if (userState.dailyAdWatchCount >= DAILY_AD_LIMIT) {
-                    tg.showAlert("You have reached your daily ad watch limit."); return;
+                    tg.showAlert("Limit ပြည့်ပြီနောက်နေ့မှကြည့်။"); return;
                 }
                 loadingModal.style.display = 'flex';
-                show_10198212().then(() => {
+                show_10207506().then(() => {
                     userState.points += POINTS_PER_AD;
                     userState.dailyAdWatchCount++;
                     saveState();
