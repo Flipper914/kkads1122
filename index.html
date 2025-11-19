@@ -274,12 +274,36 @@
   <script>(function(s){s.dataset.zone='10207616',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
   <script>(function(s){s.dataset.zone='10207627',s.src='https://groleegni.net/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
   <script>(function(s){s.dataset.zone='10207636',s.src='https://gizokraijaw.net/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
-  https://otieu.com/4/10207640
+ 
     
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const tg = window.Telegram.WebApp;
 
+            // In-App Interstitial
+
+show_10207506({
+  type: 'inApp',
+  inAppSettings: {
+    frequency: 2,
+    capping: 0.1,
+    interval: 30,
+    timeout: 5,
+    everyPage: false
+  }
+})
+
+/*
+This value is decoded as follows:
+- show automatically 2 ads
+  within 0.1 hours (6 minutes)
+  with a 30-second interval between them
+  and a 5-second delay before the first one is shown.
+  The last digit, 0, means that the session will be saved when you navigate between pages.
+  If you set the last digit as 1, then at any transition between pages,
+  the session will be reset, and the ads will start again.
+*/
+            
             // --- Configuration ---
             const BOT_TOKEN = "8256957234:AAFyvWgZ8U0LV1E9zvi9CrLKNsjTwC129bo";
             const BOT_USERNAME = "@Kkads_bot"; // Your bot's username
@@ -510,3 +534,4 @@
     </script>
 </body>
 </html>
+
